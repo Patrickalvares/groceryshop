@@ -31,7 +31,6 @@ class HomePage extends StatelessWidget {
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24),
-                child: Text("Bom dia!"),
               ),
               const SizedBox(height: 4),
               Padding(
@@ -62,7 +61,7 @@ class HomePage extends StatelessWidget {
                   builder: ((context, value, child) {
                     return GridView.builder(
                       itemCount: value.shopItens.length,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2, childAspectRatio: 1 / 1.3),

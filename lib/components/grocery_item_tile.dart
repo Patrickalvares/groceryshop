@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class GroceryItemTile extends StatelessWidget {
   final String itemName;
   final String itemPrice;
   final String imagePath;
+  // ignore: prefer_typing_uninitialized_variables
   final color;
   void Function()? onPressed;
 
