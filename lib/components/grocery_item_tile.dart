@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GroceryItemTile extends StatelessWidget {
@@ -6,13 +5,15 @@ class GroceryItemTile extends StatelessWidget {
   final String itemPrice;
   final String imagePath;
   final color;
+  void Function()? onPressed;
 
-  const GroceryItemTile({
+  GroceryItemTile({
     super.key,
     required this.itemName,
     required this.itemPrice,
     required this.imagePath,
     required this.color,
+    required this.onPressed,
   });
 
   @override
@@ -34,10 +35,10 @@ class GroceryItemTile extends StatelessWidget {
                 ),
                 Text(itemName),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: onPressed,
                   color: color,
                   child: Text(
-                    'R\$ ${itemPrice}',
+                    'R\$ $itemPrice',
                     style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
